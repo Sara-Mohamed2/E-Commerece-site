@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Moshi's Whiskers Shop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Roboto:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <section class="header">
+      <nav class="navbar">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact Us</a>
+      </nav>
+    </section>
+
+    <section id="home" class="home-section">
+      <div id="slider" class="slider">
+        <button id="prevButton">◀</button>
+        <div id="sliderImages"></div>
+        <button id="nextButton">▶</button>
+      </div>
+
+      <div class="category-filters">
+        <select id="categoryFilter" onchange="filterProducts(this.value)">
+          <option value="" selected>All Categories</option>
+          <option value="Wet Cat Food">Wet Cat Food</option>
+          <option value="Dry Cat Food">Dry Cat Food</option>
+          <option value="Kitten Food">Kitten Food</option>
+          <option value="Adult Cat Food">Adult Cat Food</option>
+          <option value="Cat Toys">Cat Toys</option>
+          <option value="Cat Beds">Cat Beds</option>
+          <option value="Cat Backpacks">Cat Backpacks</option>
+          <option value="Other Products">Other Products</option>
+        </select>
+      </div>
+
+      <div id="productinfo" class="category"></div>
+    </section>
+
+    <section id="about" class="about-section">
+      <h3>About Moshi's Whiskers Shop</h3>
+      <p>
+        It's gonna be your favorite place to shop for the most purrfect products
+        for your beloved cats
+      </p>
+    </section>
+
+    <section id="contact" class="contact-section">
+      <h2>Contact Us</h2>
+      <form id="form">
+        <label for="fullname">Full Name</label>
+        <input type="text" id="fullname" required />
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone" required />
+        <label for="email">Email</label>
+        <input type="email" id="email" required />
+        <button type="submit">Contact Us</button>
+      </form>
+    </section>
+
+    <section id="products" class="product-section">
+      <div class="product-list"></div>
+
+      <div id="cart" class="cart-container">
+        <h2>Shopping Cart</h2>
+        <ul id="cartItems"></ul>
+        <p>Total items in cart: <span id="cartCount">0</span></p>
+      </div>
+      <button id="backtotop" onclick="scrollToTop()">Back To Top</button>
+    </section>
+
+    <footer>
+      <div id="shopinfo">
+        <p>Moshi's Whiskers Shop</p>
+        <p>Contact: support@MoshisWhiskersShop.com</p>
+      </div>
+      <div id="socialicons">
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-instagram"></i>
+      </div>
+    </footer>
+
+    <script src="/script.js"></script>
+  </body>
+</html>
